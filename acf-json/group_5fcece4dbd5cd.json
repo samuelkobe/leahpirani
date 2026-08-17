@@ -1,0 +1,277 @@
+{
+    "key": "group_5fcece4dbd5cd",
+    "title": "Portfolio Settings",
+    "fields": [
+        {
+            "key": "field_5fcffadb1ac7b",
+            "label": "Header",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5fcff9feffa4b",
+            "label": "Text or Logo File?",
+            "name": "text_or_logo_file_toggle",
+            "type": "true_false",
+            "instructions": "Toggle between using Text or a Logo FIle in the header component.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Text",
+            "ui_off_text": "Logo"
+        },
+        {
+            "key": "field_5fcffa54ffa4c",
+            "label": "Header Title Text",
+            "name": "header_title_text",
+            "type": "text",
+            "instructions": "Add your branding title here.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fcff9feffa4b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "i.e. Leah Pirani",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fcff9ddffa4a",
+            "label": "Menu Logo File",
+            "name": "menu_logo_file",
+            "type": "image",
+            "instructions": "Add your logo here.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fcff9feffa4b",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5fcffb524bd06",
+            "label": "Footer",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5fcffb694bd07",
+            "label": "Footer Title Text",
+            "name": "footer_title_text",
+            "type": "text",
+            "instructions": "Add a short title here.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "i.e. Let's work together",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fcffc1d4bd08",
+            "label": "Contact Email",
+            "name": "contact_email",
+            "type": "email",
+            "instructions": "Add your contact email here.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "i.e. hello@leahpirani.com",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5fcffd0f4bd0a",
+            "label": "CV Link Text",
+            "name": "cv_link_text",
+            "type": "text",
+            "instructions": "Add the link text here.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Download CV",
+            "placeholder": "i.e. Download CV",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fcffcae4bd09",
+            "label": "CV File",
+            "name": "cv_file",
+            "type": "file",
+            "instructions": "Add CV file here.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fcffd0f4bd0a",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": 3,
+            "mime_types": ""
+        },
+        {
+            "key": "field_5fdae5b8609cc",
+            "label": "About Page Gifs",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5fdae5cc609cd",
+            "label": "Gifs",
+            "name": "gifs",
+            "type": "repeater",
+            "instructions": "Add Gifs for the <b>'About'<\/b> page here.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 5,
+            "layout": "block",
+            "button_label": "Add Gif",
+            "sub_fields": [
+                {
+                    "key": "field_5fdae601609ce",
+                    "label": "Gif",
+                    "name": "gif",
+                    "type": "image",
+                    "instructions": "Upload Gif.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1612907307
+}

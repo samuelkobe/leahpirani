@@ -1,0 +1,26 @@
+/*
+Theme Name: Leah Pirani - Portfolio
+Description: A WordPress Portfolio Theme. Theme designed by Leah Pirani. Theme built by Web Ok Solution Inc.
+Version: 1.0.0
+Author: Web Ok Solutions Inc.
+Author URI: https://leahpirani.com/
+Tags: wordpress, theme, starter, Web Ok
+License: MIT
+*/
+
+//tailwindcss
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+//sanitize.css
+@import url(~sanitize.css);
+
+//webokcss
+@import "vars";
+@import "global";
+@import "header";
+
+//comps
+@import "comps/hero-slider";
+@import "comps/latest-works";

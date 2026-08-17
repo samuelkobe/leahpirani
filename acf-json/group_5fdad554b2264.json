@@ -1,0 +1,52 @@
+{
+    "key": "group_5fdad554b2264",
+    "title": "About Page Template",
+    "fields": [
+        {
+            "key": "field_5fdadd4873dff",
+            "label": "About Content",
+            "name": "about_content",
+            "type": "wysiwyg",
+            "instructions": "There is a little magic under the hood here. Ensure you have added your gifs in the <b>Theme Settings<\/b> under the <b>About Page Gifs<\/b> tab.\r\n<br>\r\nNext you are required to connect your gifs with a shortcode.\r\n<br>\r\nThe shortcode has several attributes:\r\n<ul>\r\n<li>- <code>content<\/code>(any text, default: filler, required)<\/li>\r\n<li>- <code>img<\/code>(URL, default: silly gif, required)<\/li>\r\n<li>- <code>top<\/code>(value, default: auto, optional)<\/li>\r\n<li>- <code>bottom<\/code>(value, default: auto, optional)<\/li>\r\n<li>- <code>left<\/code>(value, default: auto, optional)<\/li>\r\n<li>- <code>right<\/code>(value, default: auto, optional)<\/li>\r\n<\/ul>\r\n<br>\r\n<b>Shortcode format:<\/b> i.e. <code>[gif_insert content=\"keyword\" img=\"https:\/\/gif-URL.example\" top=\"48rem\" bottom=\"auto\" left=\"32rem\" right=\"auto\"]<\/code>\r\n<br>\r\n<br>\r\nThe <b>keyword<\/b> can be whatever you want it to be. It will be placed in the page's HTML in a special <code>< span ><\/code> tag that will be accompanied by the gif URL you provide.\r\n<br>\r\nThe keyword will also appear in the paragraph as underlined text.\r\n<br>\r\n<br>\r\nThe <b>img<\/b> must be a gif or other image URL. It will be placed in the page's HTML in a <code>< img ><\/code> tag.\r\n<br>\r\n<br>\r\nThe <b>top<\/b>, <b>bottom<\/b>, <b>left<\/b>, and <b>right<\/b> can each be used to set the gifs location on the page.\r\n<br>\r\n<code>+<\/code> and <code>-<\/code> values are valid.\r\n<br>It is recommended to use <b>rem<\/b>, <b>vh<\/b>, <b>vw<\/b>, or <b>px<\/b> as value units. <code>0<\/code> does not need a unit.\r\n<br>\r\n<br>\r\nEach of the following are valid examples: <code>top=\"100px\"<\/code>, <code>top=\"24rem\"<\/code>, <code>bottom=\"10vh\"<\/code>, <code>left=\"0\"<\/code>, <code>right=\"20vw\"<\/code>, or <code>right=\"auto\"<\/code>",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-about.php"
+            }
+        ]
+    ],
+    "menu_order": 20,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "format",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1612907334
+}

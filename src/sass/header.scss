@@ -1,0 +1,153 @@
+#header {
+  position: fixed;
+  transition: transform 500ms ease-out 125ms;
+  &.scroll-down {
+    transition: transform 500ms ease-out 125ms;
+    position: fixed;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  &.scroll-up {
+    transition: transform 375ms ease-in 0ms;
+    background-color: transparent;
+    position: fixed;
+  }
+}
+nav {
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity 250ms ease-in 125ms;
+    ul.menu {
+      pointer-events: all;
+    }
+  }
+  &.invisible {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 250ms ease-out 125ms, visibility 0ms ease-out 250ms;
+    ul.menu {
+      pointer-events: none;
+    }
+  }
+  &.child-open {
+    & > ul > li > .menu-anchor {
+      @apply text-secondary-dark;
+    }
+  }
+  ul.menu {
+    // STANDARD
+    li {
+      .menu-anchor {
+        width: 100%;
+        position: relative;
+        display: inline-block;
+        transition: color 250ms linear 0ms;
+        &::before {
+          content: "";
+          display: flex;
+          position: absolute;
+          background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 27.6 27.6' style='enable-background:new 0 0 27.6 27.6;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%2328F0F0;%7D%0A%3C/style%3E%3Cpath class='st0' d='M17,2.6l-2.2,2.1l7.4,7.4H0v3.2h22.2l-7.4,7.4l2.2,2.2l10.6-11.2L17,2.6z'/%3E%3Cpath class='st0' d='M58.2,24.9l2.2-2.1L53,15.4h22.2v-3.2H53l7.4-7.4l-2.2-2.2L47.6,13.8L58.2,24.9z'/%3E%3C/svg%3E%0A");
+          width: 20px;
+          height: 20px;
+          left: -26px;
+          top: 4px;
+          opacity: 0;
+          transition: opacity 250ms ease-out 0ms;
+          @media (min-width: 1024px) {
+            left: -32px;
+            width: 24px;
+            height: 24px;
+          }
+        }
+        &:hover {
+          &::before {
+            opacity: 1;
+            transition: opacity 250ms ease-in 0ms, transform 250ms linear 125ms, left 250ms linear 500ms;
+          }
+        }
+      }
+    }
+    // HOVERING
+    &:hover {
+      li {
+        .menu-anchor {
+          @apply text-secondary-dark;
+          transition: color 250ms linear 0ms;
+          &:hover {
+            @apply text-secondary;
+          }
+        }
+      }
+      ul.sub-menu li a {
+        @apply text-secondary;
+      }
+    }
+  }
+}
+
+// List item 'Work' from menu styles on click aka '.parent-open' style applied.
+nav ul.menu li a.menu-anchor {
+  &::before {
+    transform: rotateZ(0deg);
+    transition: transform 250ms linear 125ms, left 250ms linear 500ms;
+  }
+  &.parent-open {
+    @apply text-secondary;
+    // &::before {
+    //   content: "";
+    //   opacity: 1;
+    //   position: absolute;
+    //   background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 27.6 27.6' style='enable-background:new 0 0 27.6 27.6;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%2328F0F0;%7D%0A%3C/style%3E%3Cpath class='st0' d='M17,2.6l-2.2,2.1l7.4,7.4H0v3.2h22.2l-7.4,7.4l2.2,2.2l10.6-11.2L17,2.6z'/%3E%3Cpath class='st0' d='M58.2,24.9l2.2-2.1L53,15.4h22.2v-3.2H53l7.4-7.4l-2.2-2.2L47.6,13.8L58.2,24.9z'/%3E%3C/svg%3E%0A");
+    //   width: 20px;
+    //   height: 20px;
+    //   left: 56px;
+    //   top: 4px;
+    //   transform: rotateZ(90deg);
+    //   transition: transform 250ms linear 625ms, left 250ms linear 250ms;
+    //   @media (min-width: 1024px) {
+    //     width: 24px;
+    //     height: 24px;
+    //     left: 64px;
+    //   }
+    // }
+  }
+}
+
+// sub-menu styles
+ul.sub-menu {
+  height: auto;
+  transition: height 0ms ease-in 0s;
+  li {
+    height: 0;
+    visibility: hidden;
+    transition: height 250ms ease-in 125ms, visibility 125ms ease-out 0ms;
+  }
+  &.open {
+    transition: height 0ms ease-out 0s;
+    li {
+      height: 28px;
+      visibility: visible;
+      transition: height 250ms ease-out 125ms, visibility 125ms ease-out 125ms;
+      @media (min-width: 1024px) {
+        height: 32px;
+      }
+    }
+  }
+}
+
+.hamburger {
+  &.open {
+    span {
+      transition: transform 150ms ease-out 0s;
+      &:first-child {
+        transform: rotateZ(45deg);
+      }
+      &:last-child {
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+}
+
+// menu overlay styles in global

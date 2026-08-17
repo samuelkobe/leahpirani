@@ -1,0 +1,19 @@
+.custom-h-screen {
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  &.custom-h-screen-half {
+    height: 50vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 50);
+    @media (min-width: 1024px) {
+      height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+      height: calc(var(--vh, 1vh) * 100);
+    }
+  }
+}
+
+.lg\:custom-h-screen { // implementated to allow lg only usage.
+  @media (min-width: 1024px) {
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}

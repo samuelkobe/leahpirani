@@ -1,0 +1,142 @@
+{
+    "key": "group_5fe3a9d980513",
+    "title": "Works Team Settings",
+    "fields": [
+        {
+            "key": "field_6058e09057a70",
+            "label": "Team Section?",
+            "name": "team_section",
+            "type": "true_false",
+            "instructions": "Toggle the 'teammates' section on and off for this specific work.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_5fe3a9f926e0f",
+            "label": "Team Title",
+            "name": "team_title",
+            "type": "text",
+            "instructions": "Default: 'Teammates'.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058e09057a70",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Teammates",
+            "placeholder": "Teammates",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5fe3aa1926e10",
+            "label": "Teammates",
+            "name": "teammates",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6058e09057a70",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5fe3aa3f26e11",
+            "min": 1,
+            "max": 10,
+            "layout": "block",
+            "button_label": "Add mate",
+            "sub_fields": [
+                {
+                    "key": "field_5fe3aa3f26e11",
+                    "label": "Teammate Name",
+                    "name": "teammate_name",
+                    "type": "text",
+                    "instructions": "Add Teammate Name",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5fe3af73764d6",
+                    "label": "Teammate Role",
+                    "name": "teammate_role",
+                    "type": "text",
+                    "instructions": "Add Teammate Role",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "work"
+            },
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "single-work.php"
+            }
+        ]
+    ],
+    "menu_order": 4,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1616437815
+}

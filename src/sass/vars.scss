@@ -1,0 +1,52 @@
+//fonts
+@font-face {
+  font-family: 'Favorit Pro';
+  src: url('../fonts/favorit-pro-light.otf') format('opentype');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Monaako Script';
+  src: url('../fonts/monaako-script.otf') format('opentype');
+  font-weight:  600;
+  font-style:   normal;
+  font-stretch: normal;
+  font-display: fallback;
+}
+
+#menu-image-location > img {
+  transition: opacity 500ms ease-in-out 0ms;
+  opacity: 0;
+}
+
+#menu-image-location > img.bottom {
+  transition: opacity 500ms ease-in-out 0ms;
+  opacity: 1;
+  z-index: 1;
+  animation-name: changeImage;
+  animation-direction: normal;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-delay: 0;
+  animation-play-state: running;
+}
+
+#menu-image-location > img.top {
+  transition: opacity 500ms ease-in-out 0ms;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menu-image-location > img.blackout {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out 0ms;
+}
+
+@keyframes changeImage {
+  0% {z-index:2; opacity:0}
+  100% {z-index:1; opacity:1}
+}

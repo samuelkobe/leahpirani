@@ -1,0 +1,447 @@
+{
+    "key": "group_5fdaca99e66c2",
+    "title": "Works Settings",
+    "fields": [
+        {
+            "key": "field_5fdacaacd0fec",
+            "label": "Image Option",
+            "name": "image_option",
+            "type": "true_false",
+            "instructions": "Choose between 'Auto' and 'Manual'.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Auto",
+            "ui_off_text": "Manual"
+        },
+        {
+            "key": "field_5ff519a7fedd0",
+            "label": "Auto",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fdacaacd0fec",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The <b>Featured image<\/b> and the default media upload sizes will produce cropped versions of the image.<br>\r\nThe <b>Work<\/b> will use these versions at 3 specific breakpoints:\r\n<ul>\r\n<li>- Mobile<\/li>\r\n<li>- Tablet<\/li>\r\n<li>- Desktop<\/li>\r\n<\/ul>\r\n<br>\r\nThe <b>Lastest Works<\/b> will use the <b>Featured image<\/b>.<br>\r\nThe Menu's Works hover functionality will use the <b>Featured image<\/b>.",
+            "new_lines": "",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5ff51975fedcf",
+            "label": "Manual",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fdacaacd0fec",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Please choose images for the <b>Mobile<\/b>, <b>Tablet<\/b>, and <b>Desktop<\/b> breakpoints. The Featured image will not be used for the Work's hero image when <b>Manual<\/b> is selected, but it must still be uploaded as it is used in the Menu's Works hover functionality.<br>\r\n<br>\r\nThe <b>Latest Works<\/b> images can be uploaded here at all breakpoints for specific cropping needs.",
+            "new_lines": "",
+            "esc_html": 0
+        },
+        {
+            "key": "field_5fdacc55827ef",
+            "label": "Manual Images",
+            "name": "manual_images",
+            "type": "group",
+            "instructions": "Choose images for the <b>Mobile<\/b>, <b>Tablet<\/b>, and <b>Desktops<\/b> breakpoints, along with the <b>Lastest Works<\/b> image.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5fdacaacd0fec",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6058d240b09d8",
+                    "label": "Hero Asset Type",
+                    "name": "asset_type",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "Image",
+                    "ui_off_text": "Video"
+                },
+                {
+                    "key": "field_5fdacc8f827f0",
+                    "label": "Mobile Image",
+                    "name": "mobile_image",
+                    "type": "image",
+                    "instructions": "Use dimensions: 750x1624",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6058d240b09d8",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": 375,
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": 1500,
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5fdaccd8827f1",
+                    "label": "Tablet Image",
+                    "name": "tablet_image",
+                    "type": "image",
+                    "instructions": "Use dimensions: 1536x2048",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6058d240b09d8",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": 768,
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": 3072,
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5ff517c1d374b",
+                    "label": "Hero Image",
+                    "name": "hero_image",
+                    "type": "image",
+                    "instructions": "Upload Image here to override <b>Featured image<\/b>.<br>\r\n<br>\r\nThis image is a little more fluid and requires a ratio of 16x9 instead of dimensions.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6058d240b09d8",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_6058d26cb09d9",
+                    "label": "Hero Video",
+                    "name": "hero_video",
+                    "type": "file",
+                    "instructions": "Must be an mp4 video.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6058d240b09d8",
+                                "operator": "!=",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5ff52075ec0cd",
+                    "label": "Latest Work Images",
+                    "name": "latest_work_images",
+                    "type": "group",
+                    "instructions": "Upload images for all breakpoints to be used in the latest works area of the home page.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "100",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ff520f1ec0ce",
+                            "label": "Lastest Works Image (Mobile)",
+                            "name": "lastest_works_image_mobile",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5ff520f2ec0cf",
+                            "label": "Lastest Works Image (Tablet)",
+                            "name": "lastest_works_image_tablet",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5ff5174fd3749",
+                            "label": "Lastest Works Image (Desktop)",
+                            "name": "lastest_works_image_desktop",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "33",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_5feb8bac38e17",
+            "label": "Title Option",
+            "name": "title_option",
+            "type": "true_false",
+            "instructions": "Choose between the Work's title or a custom title being added to the banner on individual Work pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Title",
+            "ui_off_text": "Custom"
+        },
+        {
+            "key": "field_5feb8bf738e18",
+            "label": "Custom banner title",
+            "name": "custom_banner_title",
+            "type": "text",
+            "instructions": "Max 128 characters. Leave blank if you wish for this not to be shown.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5feb8bac38e17",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 128
+        },
+        {
+            "key": "field_5feb89e3c4935",
+            "label": "Work Attributes",
+            "name": "work_attributes",
+            "type": "text",
+            "instructions": "This area's content is used in the banner of the works individual page (required).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "i.e. Strategy | Visual & Verbal ID | Digital | Packaging | Campaigns",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5feb7568f024d",
+            "label": "Work Description",
+            "name": "work_description",
+            "type": "textarea",
+            "instructions": "This area's content is used in the hover\/reveal content in the latest works section on the homepage (required).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "work"
+            },
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "single-work.php"
+            }
+        ]
+    ],
+    "menu_order": 1,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "author",
+        "format",
+        "send-trackbacks"
+    ],
+    "active": true,
+    "description": "",
+    "modified": 1616440351
+}
